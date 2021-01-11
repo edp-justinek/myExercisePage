@@ -1,0 +1,16 @@
+iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "navBar content content content"
+}
+.navBar { grid-area: navBar; }
+.content { grid-area: content; }
