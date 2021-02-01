@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     addClickFunction('confirm',countChars);
     addClickFunction('wordAscending',sortLettersAscending);
-    addClickFunction('wordDescending',sortLettersDescending);
-    addClickFunction('NumberAscending',sortNumbersAscending);
-    addClickFunction('NumberDescending',sortNumbersDescending);
+    // addClickFunction('wordDescending',sortLettersDescending);
+    // addClickFunction('NumberAscending',sortNumbersAscending);
+    // addClickFunction('NumberDescending',sortNumbersDescending);
 });
 
 function countChars() {
