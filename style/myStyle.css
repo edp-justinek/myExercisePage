@@ -1,6 +1,7 @@
-iframe {
+object {
     height: 100%;
     width: 100%;
+    background-color: lightpink;
 }
 
 .grid-container {
@@ -12,5 +13,12 @@ iframe {
     grid-template-areas:
     "navBar content content content"
 }
-.navBar { grid-area: navBar; }
-.content { grid-area: content; }
+.navBar {
+    grid-area: navBar;
+}
+.content {
+    grid-area: content;
+}
+body{
+    background-color: lightgreen;
+}

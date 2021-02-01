@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Justine Uebungen</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="scrip.js"></script>
-</head>
-<body>
-<div class="mainContainer">
-    <p>Bitte gib ein Text ein</p>
-    <input type="text" id="textInput" name="textInput">
-    <button id="confirm">Bestätigen</button>
-    <div class = "outputBox">
-        <div id = "output"></div>
-    </div>
-    <div class="outputBox">
-        <div id = "outputMap"></div>
-    </div>
-    <button id="ascending">Sortieren aufsteigen</button>
-    <button id="descending">Sortieren absteigend</button>
-</div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Justine Uebungen</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="scrip.js"></script>
+    </head>
+    <body>
+        <div class="mainContainer">
+            <p>Bitte gib ein Text ein</p>
+            <input type="text" id="textInput" name="textInput">
+            <button id="confirm">Bestätigen</button>
+            <div class = "outputBox">
+                <div id = "output"></div>
+            </div>
+            <div class="outputBox">
+                <div id = "outputMap"></div>
+            </div>
+            <div>
+                <div id="outputCounter"></div>
+                <div id="outputCounterMap"></div>
+            </div>
+            <hr>
+            <div class="sortContent spacerBottom">
+                <p>Sortierung Buchstaben:</p>
+                <button id="wordAscending">Sortieren aufsteigen</button>
+                <button id="wordDescending">Sortieren absteigend</button>
+            </div>
 
-</body>
+            <div class="sortContent">
+                <p>Sortierung Zahlen:</p>
+                <button id="NumberAscending">Sortieren aufsteigen</button>
+                <button id="NumberDescending">Sortieren absteigend</button>
+            </div>
+
+            <div id="demo"></div>
+
+        </div>
+
+    </body>
 
 </html>

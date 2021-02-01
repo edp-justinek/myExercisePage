@@ -1,12 +1,55 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    document.getElementById("confirm").addEventListener("click", countChars);
+document.addEventListener("DOMContentLoaded", (event) => {
+
+    addClickFunction('confirm',countChars);
+    addClickFunction('wordAscending',sortLettersAscending);
+    addClickFunction('wordDescending',sortLettersDescending);
+    addClickFunction('NumberAscending',sortNumbersAscending);
+    addClickFunction('NumberDescending',sortNumbersDescending);
 });
 
 function countChars() {
     const inputString = document.querySelector('#textInput').value;
     const charList = inputString.toLowerCase().split('');
-    const charSet = new Set(charList);
 
+    arrayMagic(charList);
+    mapMagic(charList);
+}
+
+function addClickFunction(elementId, func) {
+    let element = document.getElementById(elementId);
+    element.addEventListener("click", func);
+}
+
+//Wörter zählen Map Logik
+let loopCounterMap1 = 0;
+function mapMagic(charList){
+    //Hier wird die funktion mapMagic initialisiert und der input Parameter charList mitgegeben
+    let resultMap = {};
+
+    for(let char of charList){
+        //char = char.toLowerCase();
+        if(resultMap[char] == null){
+            resultMap[char] = 1;
+        } else {
+            resultMap[char]++;
+        }
+        loopCounterMap1++;
+    }
+    for(let key in resultMap){
+
+        displayOutput("outputMap", key,  resultMap[key]);
+        loopCounterMap1++;
+    }
+    displayOutputCounterMap("outputCounterMap", loopCounterMap1);
+}
+
+
+let countLoop = 0;
+//Buchstaben zählen 2 For Schleifen
+function arrayMagic(charList){
+    //Hier wird die funktion arrayMagic  initialisiert und der input Parameter charList mitgegeben
+    const charSet = new Set(charList);
+    //Speichert jeden Wert nur einmal
     for(let char of charSet){
         let charCounter = 0;
 
@@ -14,54 +57,70 @@ function countChars() {
             if(char == checkChar){
                 charCounter++;
             }
+            countLoop++;
         }
-
-        const outputCountChars = "Output: " + char + " Amount: " + charCounter + "<br>";
-        document.getElementById("output").innerHTML += outputCountChars;
-    }
-
-
-
-    let resultMap = {};
-    for(let char of charList){
-        char = char.toLowerCase();
-        //resultMap[char] = 0;
-        if(resultMap[char] == null){
-            resultMap[char] = 1;
-        } else {
-            resultMap[char]++;
-        }
-    }
-    for(let key in resultMap){
-        console.log(key , " ", resultMap[key]);
-
-        const outputMapChars =  resultMap[key];
-        document.getElementById("outputMap").innerHTML += outputMapChars;
-    }
-
-    for(let value in resultMap){
-        console.log(value , " ", resultMap[value]);
-
-        const outputMapChars =  resultMap[value];
-        document.getElementById("outputMap").innerHTML += outputMapChars;
-    }
-
-
-
-    function insertionSort(inputArr) {
-        let n = inputArr.length;
-        for (let i = 1; i < n; i++) {
-            // Choosing the first element in our unsorted subarray
-            let current = inputArr[i];
-            // The last element of our sorted subarray
-            let j = i-1;
-            while ((j > -1) && (current < inputArr[j])) {
-                inputArr[j+1] = inputArr[j];
-                j--;
-            }
-            inputArr[j+1] = current;
-        }
-        return inputArr;
+        displayOutput("output", char, charCounter);
+         displayOutputCounter("outputCounter", countLoop);
+        sortLettersAscending( charCounter);
     }
 
 }
+
+//Ausgabe
+ function displayOutputCounter(outputCounter, countLoop){
+     document.getElementById(outputCounter).innerHTML = `Anzahl  Loop:${countLoop}<br> <hr>`;
+ }
+ function displayOutputCounterMap(outputCounterMap, loopCounterMap){
+    document.getElementById(outputCounterMap).innerHTML = `Anzahl  Map Loop:${loopCounterMap} <br>`;
+ }
+function displayOutput(domId, char, charCounter){
+    document.getElementById(domId).innerHTML += `Output: ${char} Amount: ${charCounter} <br>`;
+}
+
+
+
+//Sort
+function sortLettersAscending(charCounter){
+    let bubbleSort = (charCounter) => {
+        let len = charCounter.length;
+        for (let i = 0; i < len; i++) {
+            for (let j = 0; j < len; j++) {
+                if (charCounter[j] > charCounter[j + 1]) {
+                    let tmp = charCounter[j];
+                    charCounter[j] = charCounter[j + 1];
+                    charCounter[j + 1] = tmp;
+                }
+            }
+        }
+        return charCounter;
+    };
+    document.getElementById("demo").innerHTML += `${charCounter}`;
+}
+//
+// function sortLettersDescending(demo, char){
+//     char.sort(function(a, b) {
+//         return a - b;
+//     });
+//
+//     document.getElementById('demo').innerHTML = char;
+// }
+//
+// function sortNumbersAscending(charCounter){
+//     charCounter.sort(function(a, b) {
+//         return a - b;
+//     });
+//
+//     document.getElementById('demo').innerHTML = charCounter;
+// }
+//
+// function sortNumbersDescending(demo, charCounter){
+//     console.log("hallogad");
+//     charCounter.sort(function(a, b) {
+//         return a - b;
+//     });
+//
+//
+//     document.getElementById('demo').innerHTML = "TEst funkt";
+//}
+
+
