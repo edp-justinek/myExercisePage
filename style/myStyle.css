@@ -15,10 +15,26 @@ object {
 }
 .navBar {
     grid-area: navBar;
+    background-color: lightblue;
+    padding: 5px;
 }
 .content {
     grid-area: content;
+    padding: 5px;
+}
+.title{
+    background-color: aqua;
+    border: dashed 2px black;
+    padding: 10px;
+    color: blue;
+    text-align: center;
+    box-shadow: 10px 10px 5px grey;
 }
 body{
     background-color: lightgreen;
+    font-family: 'Yusei Magic', sans-serif;
+}
+button {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
 }

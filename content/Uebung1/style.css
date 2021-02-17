@@ -1,6 +1,7 @@
 .mainContainer{
     border: 1px solid black;
     padding: 5px;
+    font-family: 'Source Code Pro', monospace;
 }
 .outputBox{
     border: 1px solid black;
@@ -10,4 +11,8 @@
 }
 .spacerBottom{
     margin-bottom: 10px;
+}
+button {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
 }
