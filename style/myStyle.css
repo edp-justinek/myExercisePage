@@ -7,17 +7,12 @@ object {
 .grid-container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-rows: 1fr;
-    gap: 0px 0px;
     grid-template-areas:
-    "navBar content content content"
+    ". content content ."
 }
-.navBar {
-    grid-area: navBar;
-    background-color: lightblue;
-    padding: 5px;
-}
+
 .content {
     grid-area: content;
     padding: 5px;
@@ -27,8 +22,12 @@ object {
     border: dashed 2px black;
     padding: 10px;
     color: blue;
-    text-align: center;
     box-shadow: 10px 10px 5px grey;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "nav . mainTitle mainTitle . "
 }
 body{
     background-color: lightgreen;
@@ -37,4 +36,55 @@ body{
 button {
     font-family: 'Source Code Pro', monospace;
     font-weight: 700;
+}
+
+/*HamburgerMenu*/
+
+body {
+    font-family: "Lato", sans-serif;
+}
+.mainTitle{
+    grid-area: mainTitle;
+    text-align: center;
+}
+.nav{
+    grid-area: nav;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closeBtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }

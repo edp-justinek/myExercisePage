@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="./style/myStyle.css">
 <!--    <script src="./js/pageSwitcher.js"></script>-->
+    <script src="./js/menu.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&family=Yusei+Magic&display=swap" rel="stylesheet">
@@ -10,18 +11,24 @@
     <title>Title</title>
 </head>
 <body>
-<h1 class="title">Übungen für Justine Käslin</h1>
+
+<div class="title">
+    <div class="nav">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closeBtn" id="closeNav">&times;</a>
+            <a href="#" id="uebung1">Buchstaben zählen</button></a>
+            <a href="#" id="uebung2">Quiz</a>
+            <a href="#" id="uebung3">Übung 3</a>
+            <a href="#" id="uebung4">Übung 4</a>
+        </div>
+        <span style="font-size:30px;cursor:pointer" id="openNav">&#9776; Menu</span>
+    </div>
+    <div class="mainTitle">
+        <h1>Übungen für Justine Käslin</h1>
+    </div>
+</div>
 <div id="sizer">
     <div class="grid-container">
-        <div class="navBar">
-            <h2>Übungen</h2>
-            <ul>
-                <li><button id="uebung1">Buchstaben zählen</button></li>
-                <li><button id="uebung2">Quiz</button></li>
-                <li><button id="uebung3">Übung 3</button></li>
-                <li><button id="uebung4">Übung 4</button></li>
-            </ul>
-        </div>
         <div class="content">
 <!--            <object class="innerObj" data="" type=""><a href="">Hallo</a> </object>-->
                 <object class="innerObj" data="./content/Uebung1/index.html"></object>

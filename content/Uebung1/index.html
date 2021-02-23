@@ -8,19 +8,23 @@
     </head>
     <body>
         <div class="mainContainer">
-            <p>Bitte gib ein Text ein</p>
-            <input type="text" id="textInput" name="textInput">
-            <button id="confirm">Bestätigen</button>
-            <div class = "outputBox">
-                <div id = "output"></div>
+            <p>Please gib ein Text ein</p>
+            <input type="text" id="textInput" autofocus="on" autocomplete="off" name="textInput">
+            <button id="confirm">Confirm</button>
+            <div class="mainOutputBox">
+                <div>
+                    <h4>Ausgabe Array</h4>
+                    <div class = "outputBox" id ="output"></div>
+                    <div id="outputCounter"></div>
+                </div>
+
+                <div class="spacerLeft">
+                    <h4>Ausgabe Map</h4>
+                    <div class="outputBox" id ="outputMap"></div>
+                    <div id="outputCounterMap"></div>
+                </div>
             </div>
-            <div class="outputBox">
-                <div id = "outputMap"></div>
-            </div>
-            <div>
-                <div id="outputCounter"></div>
-                <div id="outputCounterMap"></div>
-            </div>
+
             <hr>
             <div class="sortContent spacerBottom">
                 <p>Sortierung Buchstaben:</p>
@@ -35,6 +39,7 @@
             </div>
 
             <div id="demo"></div>
+            <div id="demo2"></div>
 
         </div>
 

@@ -1,13 +1,22 @@
 .mainContainer{
     border: 1px solid black;
     padding: 5px;
+    margin: 5px;
     font-family: 'Source Code Pro', monospace;
 }
 .outputBox{
     border: 1px solid black;
     margin: 20px 0px;
-    width: 50%;
     min-height: 20px;
+    background-color: lightgray;
+}
+.spacerLeft{
+    margin-left: 5px;
+}
+.mainOutputBox{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 .spacerBottom{
     margin-bottom: 10px;
@@ -15,4 +24,7 @@
 button {
     font-family: 'Source Code Pro', monospace;
     font-weight: 700;
+}
+@media only screen and (max-width: 425px) {
+    
 }

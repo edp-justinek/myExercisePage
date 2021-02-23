@@ -3,20 +3,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //Buttons erhalten eine Funktion, die jeweils per klick ausgelöst wird
     addClickFunction('confirm',countChars);
     addClickFunction('wordAscending',sortLettersAscending);
-    // addClickFunction('wordDescending',sortLettersDescending);
-    // addClickFunction('NumberAscending',sortNumbersAscending);
-    // addClickFunction('NumberDescending',sortNumbersDescending);
+    addClickFunction('wordDescending',sortLettersDescending);
+    addClickFunction('NumberAscending',sortNumbersAscending);
+    addClickFunction('NumberDescending',sortNumbersDescending);
 });
-//Diese Funktion liest den Wert des Input Felds und wandelt alle Grossbuchstaben in kleine Buchstaben aus
-//danach wird das Wort pro Buchstabe gesplitet zuletzt
-// //wird dieser Liste an die beiden Funktionen "arrayMagic" und "mapMagic" weitergegeben
+//liest den Wert des Input Felds und wandelt alle Grossbuchstaben in kleine Buchstaben
+//anschliessend wird das Wort pro Buchstabe gesplitet
+// Liste an die beiden Funktionen "arrayMagic" und "mapMagic" weitergegeben
 function countChars() {
-    const inputString = document.querySelector('#textInput').value;
-    const charList = inputString.toLowerCase().split('');
+    const charList = getInputStringAsList();
     arrayMagic(charList);
     mapMagic(charList);
-    sortLettersAscending(charList);
-
+}
+function getInputStringAsList(){
+    const inputString = document.querySelector('#textInput').value;
+    return inputString.toLowerCase().split('');
 }
 
 function addClickFunction(elementId, func) {
@@ -41,13 +42,11 @@ function mapMagic(charList){
         loopCounterMap1++;
     }
     for(let key in resultMap){
-
         displayOutput("outputMap", key,  resultMap[key]);
         loopCounterMap1++;
     }
     displayOutputCounterMap("outputCounterMap", loopCounterMap1);
 }
-
 
 let countLoop = 0;
 //Buchstaben zählen 2 For Schleifen
@@ -68,15 +67,13 @@ function arrayMagic(charList){
         //Danach wird eine liste der Buchstaben und die zählungen der Buchstaben an die id "output" mitgegeben
         displayOutput("output", char, charCounter);
         //Schleifenzähler wird mit ID an Funktion "displayOutputCounter" weitergegeben
-         displayOutputCounter("outputCounter", countLoop);
-        sortLettersAscending( charSet);
+        displayOutputCounter("outputCounter", countLoop);
     }
-
 }
 
 //Ausgabe
  function displayOutputCounter(outputCounter, countLoop){
-     document.getElementById(outputCounter).innerHTML = `Anzahl  Loop:${countLoop}<br> <hr>`;
+     document.getElementById(outputCounter).innerHTML = `Anzahl  Loop:${countLoop}<br>`;
  }
  function displayOutputCounterMap(outputCounterMap, loopCounterMap){
     document.getElementById(outputCounterMap).innerHTML = `Anzahl  Map Loop:${loopCounterMap} <br>`;
@@ -86,40 +83,43 @@ function displayOutput(domId, char, charCounter){
 }
 
 //Sort
-function sortLettersAscending(charList){
-    let charCounterArray = charList;
-    console.log(charCounterArray);
-    charCounterArray.sort(function(a, b) {
-         return a - b;
-     });
-
-    document.getElementById('demo').innerHTML = charCounterArray;
+function sortLettersAscending(){
+    let notSortCharList = getInputStringAsList();
+    let sortedList = notSortCharList.sort();
+    document.getElementById('output').innerHTML = '';
+    document.getElementById('outputMap').innerHTML = '';
+    arrayMagic(sortedList);
+    mapMagic(sortedList);
 }
-//
-// function sortLettersDescending(demo, char){
-//     char.sort(function(a, b) {
-//         return a - b;
-//     });
-//
-//     document.getElementById('demo').innerHTML = char;
-// }
-//
-// function sortNumbersAscending(charCounter){
-//     charCounter.sort(function(a, b) {
-//         return a - b;
-//     });
-//
-//     document.getElementById('demo').innerHTML = charCounter;
-// }
-//
-// function sortNumbersDescending(demo, charCounter){
-//     console.log("hallogad");
-//     charCounter.sort(function(a, b) {
-//         return a - b;
-//     });
-//
-//
-//     document.getElementById('demo').innerHTML = "TEst funkt";
-//}
+
+function sortLettersDescending(){
+    let notSortCharList = getInputStringAsList();
+    let sortedList = notSortCharList.sort();
+    document.getElementById('output').innerHTML = '';
+    document.getElementById('outputMap').innerHTML = '';
+    let revSortedList = sortedList.reverse();
+    arrayMagic(revSortedList);
+    mapMagic(revSortedList);
+}
+
+function sortNumbersAscending(){
+    let notSortCharList = getInputStringAsList();
+    let sortedList = notSortCharList.sort();
+    document.getElementById('output').innerHTML = '';
+    document.getElementById('outputMap').innerHTML = '';
+    let revSortedList = sortedList.reverse();
+    arrayMagic(revSortedList);
+    mapMagic(revSortedList);
+}
+
+function sortNumbersDescending(){
+    let notSortCharList = getInputStringAsList();
+    let sortedList = notSortCharList.sort();
+    document.getElementById('output').innerHTML = '';
+    document.getElementById('outputMap').innerHTML = '';
+    arrayMagic(sortedList);
+    mapMagic(sortedList);
+}
+
 
 
