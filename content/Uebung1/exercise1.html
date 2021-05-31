@@ -2,24 +2,24 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Justine Uebungen</title>
+        <title>Justine Exercise</title>
         <link rel="stylesheet" href="style.css">
         <script src="scrip.js"></script>
     </head>
     <body>
         <div class="mainContainer">
             <p>Please gib ein Text ein</p>
-            <input type="text" id="textInput" autofocus="on" autocomplete="off" name="textInput">
+            <input type="text" onfocus="this.value=''" id="textInput" autofocus="on" autocomplete="off" name="textInput">
             <button id="confirm">Confirm</button>
             <div class="mainOutputBox">
                 <div>
-                    <h4>Ausgabe Array</h4>
+                    <h4>Output Array</h4>
                     <div class = "outputBox" id ="output"></div>
                     <div id="outputCounter"></div>
                 </div>
 
                 <div class="spacerLeft">
-                    <h4>Ausgabe Map</h4>
+                    <h4>Output Map</h4>
                     <div class="outputBox" id ="outputMap"></div>
                     <div id="outputCounterMap"></div>
                 </div>
@@ -27,22 +27,16 @@
 
             <hr>
             <div class="sortContent spacerBottom">
-                <p>Sortierung Buchstaben:</p>
+                <p>Sort Chars:</p>
                 <button id="wordAscending">Sortieren aufsteigen</button>
                 <button id="wordDescending">Sortieren absteigend</button>
             </div>
 
             <div class="sortContent">
-                <p>Sortierung Zahlen:</p>
+                <p>Sort Numbers:</p>
                 <button id="NumberAscending">Sortieren aufsteigen</button>
                 <button id="NumberDescending">Sortieren absteigend</button>
             </div>
-
-            <div id="demo"></div>
-            <div id="demo2"></div>
-
         </div>
-
     </body>
-
 </html>

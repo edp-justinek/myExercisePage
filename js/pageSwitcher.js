@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
      const objUebung3 = document.getElementById("obj3");
      const objUebung4 = document.getElementById("obj4");
 
-    // const test1 ='<object data="./content/Uebung1/index.html"></object></object>';
-    // const test2 ='<object data="./content/Uebung2/index.html"></object></object>';
-    // const test3 ='<object data="./content/Uebung3/index.html"></object></object>';
-    // const test4 ='<object data="./content/Uebung4/index.html"></object></object>';
+    // const test1 ='<object data="./content/Uebung1/exercise1.html"></object></object>';
+    // const test2 ='<object data="./content/Uebung2/exercise1.html"></object></object>';
+    // const test3 ='<object data="./content/Uebung3/exercise1.html"></object></object>';
+    // const test4 ='<object data="./content/Uebung4/exercise1.html"></object></object>';
 
 
  function changInnerObj1(){
@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
      innerObj.style.display = "none";
      objUebung4.style.display = "block";
  }
+
 
 
 

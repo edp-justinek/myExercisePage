@@ -12,32 +12,44 @@
 </head>
 <body>
 
-<div class="title">
-    <div class="nav">
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closeBtn" id="closeNav">&times;</a>
-            <a href="#" id="uebung1">Buchstaben zählen</button></a>
-            <a href="#" id="uebung2">Quiz</a>
-            <a href="#" id="uebung3">Übung 3</a>
-            <a href="#" id="uebung4">Übung 4</a>
+<nav role="navigation">
+    <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+            <a href="#"><li>Count Chars</li></a>
+            <a href="#"><li>Quiz</li></a>
+            <a href="#"><li>Exercise 3</li></a>
+            <a href="#"><li>Exercise 4</li></a>
+        </ul>
+    </div>
+</nav>
+    <div id="main">
+        <div class="title">
+
+            <div class="mainTitle">
+                <h1>Exercise Justine Käslin</h1>
+            </div>
         </div>
-        <span style="font-size:30px;cursor:pointer" id="openNav">&#9776; Menu</span>
-    </div>
-    <div class="mainTitle">
-        <h1>Übungen für Justine Käslin</h1>
-    </div>
-</div>
-<div id="sizer">
-    <div class="grid-container">
-        <div class="content">
-<!--            <object class="innerObj" data="" type=""><a href="">Hallo</a> </object>-->
-                <object class="innerObj" data="./content/Uebung1/index.html"></object>
-<!--            <object id="obj1" style="display: none" data="./content/Uebung1/index.html"></object>-->
-<!--            <object id="obj2"  style="display: none" data="./content/Uebung2/index.html"></object>-->
-<!--            <object id="obj3" style="display: none" data="./content/Uebung3/index.html"></object>-->
-<!--            <object id="obj4" style="display: none" data="./content/Uebung4/index.html"></object>-->
+        <div id="sizer">
+            <div class="grid-container">
+                <div class="content">
+                    <!--            <object class="innerObj" data="" type=""><a href="">Hallo</a> </object>-->
+                    <object class="innerObj" data="content/Uebung1/exercise1.html"></object>
+                    <!--            <object id="obj1" style="display: none" data="./content/Uebung1/exercise1.html"></object>-->
+                    <!--            <object id="obj2"  style="display: none" data="./content/Uebung2/exercise1.html"></object>-->
+                    <!--            <object id="obj3" style="display: none" data="./content/Uebung3/exercise1.html"></object>-->
+                    <!--            <object id="obj4" style="display: none" data="./content/Uebung4/exercise1.html"></object>-->
+                </div>
+            </div>
         </div>
     </div>
-</div>
 </body>
 </html>
+
+
+
+
+
