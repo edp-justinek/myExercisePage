@@ -16,8 +16,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     });
 
-
-
 });
 //liest den Wert des Input Felds und wandelt alle Grossbuchstaben in kleine Buchstaben
 //anschliessend wird das Wort pro Buchstabe gesplitet
@@ -103,7 +101,6 @@ function clearOutput(){
     document.getElementById('outputMap').innerHTML = '';
 }
 
-
 //Sort
 function sortLettersAscending(){
     //mit der clearOuput Funktion wird der angezeigt output geleert
@@ -133,22 +130,24 @@ function sortLettersDescending(){
 }
 
 function sortNumbersAscending(){
-
     clearOutput();
     let notSortCharList = getInputStringAsList();
     let sortedList = notSortCharList.sort();
-    arrayMagic(sortedList);
-    mapMagic(sortedList);
+    let sortedListArray = arrayMagic(sortedList);
+    let sortedListMap = mapMagic(sortedList);
+
+    console.log("ArrayList" + sortedListArray);
+    console.log("MapList" + sortedListMap);
+
+
 }
 
 function sortNumbersDescending(){
-
     clearOutput();
     let notSortCharList = getInputStringAsList();
     let sortedList = notSortCharList.sort();
     arrayMagic(sortedList);
     mapMagic(sortedList);
-
 }
 
 
@@ -176,4 +175,7 @@ justine.setNachname("Studer");
 justine.nachname = "anderes";
 console.log(justine);
 */
+
+
+
 
