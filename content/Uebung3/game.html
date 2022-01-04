@@ -12,6 +12,7 @@
         let canvas;
         let ctx;
         let backgroundImage = new Image();
+        let counter = 0;
 
         let rocket = {
             x: 50,
@@ -56,7 +57,7 @@
             draw();
         }
 
-        function checkCollionf(){
+        function checkCollion(){
             ufos.forEach(function(ufo) {
 
                 // Kontrollieren, ob UFO mit Rakete kollidiert
@@ -79,6 +80,7 @@
                     ) {
                         ufo.hit = true;
                         ufo.img.src = 'img/boom.png';
+                        counter += 5;
 
                         setTimeout(() => {
                             ufos = ufos.filter(u => u != ufo);
@@ -154,6 +156,7 @@
             shots.forEach(function(shot){
                 ctx.drawImage(shot.img,shot.x,shot.y,shot.width,shot.height)
             })
+            document.querySelector("#counter").innerText = counter;
             requestAnimationFrame(draw)
         }
 
