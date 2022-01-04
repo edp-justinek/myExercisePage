@@ -2,54 +2,32 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="./style/myStyle.css">
-<!--    <script src="./js/pageSwitcher.js"></script>-->
-    <script src="./js/menu.js" defer></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="./js/pageSwitcher.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&family=Yusei+Magic&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Justines Lern Page</title>
 </head>
 <body>
-
-<nav role="navigation">
-    <div id="menuToggle">
-        <input type="checkbox"/>
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="menu">
-            <a href="./content/Uebung1/exercise1.html"><li id="navCountChars">Count Chars</li></a>
-            <a href="./content/Uebung2/todo.html"><li id="navTodo">Todo</li></a>
-            <a href="./content/Uebung3/game.html"><li id="navGame">Game</li></a>
-            <a href="./content/Uebung4/calc.html"><li id="navCalculator">Calculator</li></a>
-            <a href="./content/Uebung5/exercise.html"><li id="navJS">JS Uebungen</li></a>
+<div class="title">
+    <div class="mainTitle">
+        <h1>Exercise Justine Käslin</h1>
+    </div>
+</div>
+<div class="grid-container">
+    <div class="menu">
+        <ul class="navigation mainNav">
+            <li data="./content/Uebung1/exercise1.html">Count Chars</li>
+            <li data="./content/Uebung2/todo.html">ToDo</li>
+            <li data="./content/Uebung3/game.html">Game</li>
+            <li data="./content/Uebung4/calc.html">Calculator</li>
+            <li data="./content/Uebung5/exercise.html">JS Uebungen</li>
         </ul>
     </div>
-</nav>
-    <div id="main">
-        <div class="title">
-
-            <div class="mainTitle">
-                <h1>Exercise Justine Käslin</h1>
-            </div>
-        </div>
-        <div id="sizer">
-            <div class="grid-container">
-                <div class="content">
-                    <object id="obj1" data="./content/Uebung1/exercise1.html"></object>
-                    <object id="obj2"  class="displNone" data="./content/Uebung2/todo.html"></object>
-                    <object id="obj3" class="displNone" data="./content/Uebung3/game.html"></object>
-                    <object id="obj4" class="displNone" data="./content/Uebung4/calc.html"></object>
-                    <object id="obj5" class="displNone" data="./content/Uebung5/exercise.html"></object>
-                </div>
-            </div>
-        </div>
+        <object id="content" data="./content/Uebung1/exercise1.html"></object>
     </div>
+
 </body>
-<!--<script>
-    document.getElementById('objContent').setAttribute('data', './content/Uebung2/todo.html');
-</script>-->
 </html>
 
 
