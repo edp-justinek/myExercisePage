@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     addToDoButton.addEventListener('click', function(){
         let paragraph = document.createElement('p');
-
         paragraph.classList.add('paragraph-styling');
         paragraph.innerText = inputField.value;
         toDoContainer.appendChild(paragraph);
@@ -13,6 +12,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         paragraph.addEventListener('click', function(){
             paragraph.style.textDecoration = "line-through";
         })
+        //Doppelklick wird das element gelöscht
         paragraph.addEventListener('dblclick', function(){
             toDoContainer.removeChild(paragraph);
         })

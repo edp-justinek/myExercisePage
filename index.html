@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="./style/myStyle.css">
 <!--    <script src="./js/pageSwitcher.js"></script>-->
-    <script src="./js/menu.js"></script>
+    <script src="./js/menu.js" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&family=Yusei+Magic&display=swap" rel="stylesheet">
@@ -14,15 +14,16 @@
 
 <nav role="navigation">
     <div id="menuToggle">
-        <input type="checkbox" />
+        <input type="checkbox"/>
         <span></span>
         <span></span>
         <span></span>
         <ul id="menu">
-            <a href="#"><li>Count Chars</li></a>
-            <a href="#"><li>Todo</li></a>
-            <a href="#"><li>Game</li></a>
-            <a href="#"><li>Exercise 4</li></a>
+            <a href="./content/Uebung1/exercise1.html"><li id="navCountChars">Count Chars</li></a>
+            <a href="./content/Uebung2/todo.html"><li id="navTodo">Todo</li></a>
+            <a href="./content/Uebung3/game.html"><li id="navGame">Game</li></a>
+            <a href="./content/Uebung4/calc.html"><li id="navCalculator">Calculator</li></a>
+            <a href="./content/Uebung5/exercise.html"><li id="navJS">JS Uebungen</li></a>
         </ul>
     </div>
 </nav>
@@ -36,12 +37,11 @@
         <div id="sizer">
             <div class="grid-container">
                 <div class="content">
-                    <!--            <object class="innerObj" data="" type=""><a href="">Hallo</a> </object>-->
-                    <object class="innerObj" id="objContent" data="content/Uebung1/exercise1.html"></object>
-                    <!--            <object id="obj1" style="display: none" data="./content/Uebung1/exercise1.html"></object>-->
-                    <!--            <object id="obj2"  style="display: none" data="./content/Uebung2/exercise1.html"></object>-->
-                    <!--            <object id="obj3" style="display: none" data="./content/Uebung3/exercise1.html"></object>-->
-                    <!--            <object id="obj4" style="display: none" data="./content/Uebung4/exercise1.html"></object>-->
+                    <object id="obj1" data="./content/Uebung1/exercise1.html"></object>
+                    <object id="obj2"  class="displNone" data="./content/Uebung2/todo.html"></object>
+                    <object id="obj3" class="displNone" data="./content/Uebung3/game.html"></object>
+                    <object id="obj4" class="displNone" data="./content/Uebung4/calc.html"></object>
+                    <object id="obj5" class="displNone" data="./content/Uebung5/exercise.html"></object>
                 </div>
             </div>
         </div>

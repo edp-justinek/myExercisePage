@@ -48,7 +48,6 @@ function mapMagic(charList,loopCounterMap1){
     //Objekt wird erstellt
     let resultMap = {};
     for(let char of charList){
-        //char = char.toLowerCase();
         if(resultMap[char] == null){
             resultMap[char] = 1;
         } else {
@@ -72,7 +71,7 @@ function arrayMagic(charList,countLoop){
     //hier wird das erste element der Liste genommen und dann über die zweite For-Schleife mit allen Buchstaben
     //der Liste verglichen und gezählt sobald der Buchstabe gleich ist
     for(let char of charSet){
-        var charCounter = 0;
+        let charCounter = 0;
         for(let checkChar of charList){
             if(char == checkChar){
                 charCounter++;
@@ -133,12 +132,13 @@ function sortNumbersAscending(){
     clearOutput();
     let notSortCharList = getInputStringAsList();
     let sortedList = notSortCharList.sort();
-    let sortedListArray = arrayMagic(sortedList);
-    let sortedListMap = mapMagic(sortedList);
+    let revSortedList = sortedList.reverse();
+    let arraytest = arrayMagic(revSortedList,countZero);
+    let maptest = mapMagic(revSortedList,countZero);
 
-    console.log("ArrayList" + sortedListArray);
-    console.log("MapList" + sortedListMap);
 
+    console.log(arraytest);
+    console.log(maptest);
 
 }
 
@@ -169,7 +169,7 @@ class Person {
         this.nachname = nachname;
     }
 }
-const justine = new Person("Justine", "Kaesin")
+const justine = new Person("Justine", "Kaeslin")
 console.log(justine);
 justine.setNachname("Studer");
 justine.nachname = "anderes";

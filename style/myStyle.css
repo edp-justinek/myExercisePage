@@ -4,6 +4,14 @@ object {
     background-color: lightpink;
 }
 
+.displNone{
+    display: none;
+}
+
+.displBlock{
+    display: block;
+}
+
 .grid-container {
     height: 100vh;
     display: grid;

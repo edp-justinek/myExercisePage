@@ -1,46 +1,71 @@
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    const siteUebung1 = document.getElementById("uebung1").addEventListener("click",changInnerObj1);
-    const siteUebung2 = document.getElementById("uebung2").addEventListener("click",changInnerObj2);
-    const siteUebung3 = document.getElementById("uebung3").addEventListener("click",changInnerObj3);
-    const siteUebung4 = document.getElementById("uebung4").addEventListener("click",changInnerObj4);
+    document.getElementById("navCountChars").addEventListener("click",changInnerObj1);
+    document.getElementById("navTodo").addEventListener("click",changInnerObj2);
+    document.getElementById("navGame").addEventListener("click",changInnerObj3);
+    document.getElementById("navCalculator").addEventListener("click",changInnerObj4);
+    document.getElementById("navJS").addEventListener("click",changInnerObj5);
 
-    const innerObj = document.getElementById("innerObj")
-
-     const objUebung1 = document.getElementById("obj1");
-     const objUebung2 = document.getElementById("obj2");
-     const objUebung3 = document.getElementById("obj3");
-     const objUebung4 = document.getElementById("obj4");
-
-    // const test1 ='<object data="./content/Uebung1/exercise1.html"></object></object>';
-    // const test2 ='<object data="./content/Uebung2/exercise1.html"></object></object>';
-    // const test3 ='<object data="./content/Uebung3/exercise1.html"></object></object>';
-    // const test4 ='<object data="./content/Uebung4/exercise1.html"></object></object>';
-
+     let objUebung1 = document.getElementById("obj1");
+     let objUebung2 = document.getElementById("obj2");
+     let objUebung3 = document.getElementById("obj3");
+     let objUebung4 = document.getElementById("obj4");
+     let objUebung5 = document.getElementById("obj5");
 
  function changInnerObj1(){
-     innerObj.style.display = "none";
-     objUebung1.style.display = "block";
+     objUebung1.classList.add("displBlock");
+     objUebung1.classList.remove("displNone");
+     objUebung2.classList.add("displNone");
+     objUebung2.classList.remove("displBlock");
+     objUebung3.classList.add("displNone");
+     objUebung3.classList.remove("displBlock");
+     objUebung4.classList.add("displNone");
+     objUebung4.classList.remove("displBlock");
+     objUebung5.classList.add("displNone");
+     objUebung5.classList.remove("displBlock");
+
  }
 
  function changInnerObj2(){
-     innerObj.style.display = "none";
-     objUebung2.style.display = "block";
+     objUebung1.classList.add("displNone");
+     objUebung1.classList.remove("displBlock");
+     objUebung2.classList.add("displBlock");
+     objUebung2.classList.remove("displNone");
+     objUebung3.classList.add("displNone");
+     objUebung3.classList.remove("displBlock");
+     objUebung4.classList.add("displNone");
+     objUebung4.classList.remove("displBlock");
+     objUebung5.classList.add("displNone");
+     objUebung5.classList.remove("displBlock");
  }
 
  function changInnerObj3(){
-     innerObj.style.display = "none";
-     objUebung3.style.display = "block";
+     objUebung1.classList.add("displNone");
+     objUebung1.classList.remove("displBlock");
+     objUebung2.classList.add("displNone");
+     objUebung2.classList.remove("displBlock");
+     objUebung3.classList.add("displBlock");
+     objUebung3.classList.remove("displNone");
+     objUebung4.classList.add("displNone");
+     objUebung4.classList.remove("displBlock");
+     objUebung5.classList.add("displNone");
+     objUebung5.classList.remove("displBlock");
  }
 
  function changInnerObj4(){
-     innerObj.style.display = "none";
+     objUebung1.style.display = "none";
+     objUebung2.style.display = "none";
+     objUebung3.style.display = "none";
      objUebung4.style.display = "block";
+     objUebung5.style.display = "none";
  }
 
-
-
-
-
+function changInnerObj5(){
+    objUebung1.style.display = "none";
+    objUebung2.style.display = "none";
+    objUebung3.style.display = "none";
+    objUebung4.style.display = "none";
+    objUebung5.style.display = "block";
+}
 
 });
