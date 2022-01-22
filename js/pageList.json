@@ -1,0 +1,11 @@
+{
+  "pagecontent":[
+    {"label":"Count Chars", "contentPath":"./content/Uebung1/exercise1.html"},
+    {"label":"ToDo", "contentPath":"./content/Uebung2/todo.html"},
+    {"label":"Rocket", "contentPath":"./content/Uebung3/game.html"},
+    {"label":"Calculator", "contentPath":"./content/Uebung4/calc.html"},
+    {"label":"Snake", "contentPath":"./content/Uebung5/snake.html"},
+    {"label":"Login", "contentPath":"./content/LoginRegister/login.html"},
+    {"label":"Registrieren", "contentPath":"./content/LoginRegister/register.html"}
+  ]
+}

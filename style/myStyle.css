@@ -4,16 +4,8 @@ object {
     background-color: lightpink;
 }
 
-.displNone{
-    display: none;
-}
-
-.displBlock{
-    display: block;
-}
-
 .grid-container {
-    height: 100vh;
+    height: 70vh;
     display: grid;
     grid-template-columns: 1fr 3fr 3fr 1fr;
     grid-template-rows: 1fr;
@@ -50,6 +42,9 @@ button {
 }
 .navigation{
     list-style: none;
+}
+.mainNav > li{
+    cursor: pointer;
 }
 
 

@@ -1,0 +1,10 @@
+form > div{
+    width: 25%;
+}
+
+div > label{
+    min-width: 100%;
+}
+div > input{
+    min-width: 100%;
+}
